@@ -1,0 +1,37 @@
+{
+  "name": "codeatlas",
+  "version": "0.1.0",
+  "description": "Maps a repo by how its domains depend on each other rather than its folder tree, and traces what breaks if you delete a file.",
+  "type": "module",
+  "bin": {
+    "codeatlas": "./dist/cli.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/cli.js",
+    "test": "npm run build && node --test dist/__tests__/*.test.js"
+  },
+  "keywords": [
+    "ai",
+    "architecture",
+    "dependency-graph",
+    "developer-tools",
+    "cli",
+    "static-analysis"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.124.0",
+    "zod": "^4.5.4"
+  },
+  "devDependencies": {
+    "@types/node": "^26.5.0",
+    "typescript": "^7.0.2"
+  }
+}
